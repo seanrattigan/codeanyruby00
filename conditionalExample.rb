@@ -1,6 +1,6 @@
 =begin
-This is a multiline comment and con spwan as many lines as you
-like. But =begin and =end should come in the first line only. 
+Ruby uses if, elsif, else, and another odd one called unless.Ruby
+Sample code is shown below
 =end
 
 num1 = 7.0
@@ -27,3 +27,4 @@ unless (num2 == num1) then        # Executes code if conditional is false
 else
   puts "Unless block not executed, so nums must be the same"
 end
+  
