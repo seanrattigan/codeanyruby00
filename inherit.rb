@@ -36,7 +36,7 @@ class Lion < Mammal
   end
 end
 
-# Chimera inherits from Lion
+# Hawkat inherits from Lion
 class Hawkat < Lion
   def fly
     puts "I believe I can fly"
@@ -44,13 +44,20 @@ class Hawkat < Lion
 end
 
 # main program
-dodger = Cat.new 
-puts dodger.getName()
-puts dodger.getWeight() 
-dodger.speak()
-lion1 = Lion.new 
-puts lion1
-lion1.speak()
-myth = Hawkat.new 
-myth.speak()
-myth.fly()
+puts "\tDodger and Roger are Cats <- Mammal"
+dodger = Cat.new                # will use defaults from init in Parent Class
+roger = Cat.new("Roger", 3.14)  # Initialised
+puts dodger.getName()           # inherited method
+puts dodger.getWeight()         # inherited method
+puts roger               # inherited toString method
+dodger.speak()           # Cat method
+
+puts "\n\tLion Time <- Mammal"
+lion1 = Lion.new        # will use defaults from init in Parent Class
+puts lion1              # inherited toString method
+lion1.speak()           # Lion method
+
+puts "\n\tHawkat <- Lion <- Mammal"
+myth = Hawkat.new     # will use defaults from init in super (Mammal) Class
+myth.speak()          # Inherited from Lion
+myth.fly()            # Hawkat method
